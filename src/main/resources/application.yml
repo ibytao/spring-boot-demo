@@ -1,0 +1,6 @@
+server:
+  port: 8088
+
+user:
+  name: "buck"
+  age: 18
