@@ -1,4 +1,4 @@
-package com.example.demo.dao;
+package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
