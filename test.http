@@ -1,0 +1,21 @@
+
+# POST http://localhost:8088/articles
+# Content-Type: application/json
+# {
+#     "author": "zimug",
+#     "title": "spring boot 5",
+#     "content": "c",
+#     "createTime": "2022-12-11 15:27:30"
+# }
+
+PUT http://localhost:8088/articles
+Content-Type: application/json
+{
+    "id": 7,
+    "author": "zimug",
+    "title": "spring boot",
+    "content": "c",
+    "createTime": "2022-12-11 15:27:30"
+}
+
+# DELETE http://localhost:8088/articles/4
