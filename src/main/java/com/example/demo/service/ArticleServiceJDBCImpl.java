@@ -8,6 +8,7 @@ import com.example.demo.dao.ArticleJDBCDAO;
 import com.example.demo.model.Article;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ArticleServiceJDBCImpl implements ArticleService {
@@ -28,11 +29,16 @@ public class ArticleServiceJDBCImpl implements ArticleService {
     }
 
     @Override
+    @Transactional
     public void updateArticle(Article article) {
         if (article.getId() == null) {
             // TODO
         }
-        articleJDBCDAO.updateById(article);
+        articleJDBCDAO.deleteById(article.getId());
+        articleJDBCDAO.save(article);
+        // articleJDBCDAO.updateById(article);
+
+        int a = 10 / 0;
     }
 
     @Override
