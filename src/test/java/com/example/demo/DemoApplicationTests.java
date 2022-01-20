@@ -3,6 +3,9 @@ package com.example.demo;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.nio.ByteBuffer;
+import java.util.Arrays;
+
 import com.example.demo.model.CheeseShop;
 import com.example.demo.model.Customer;
 
@@ -40,7 +43,16 @@ class DemoApplicationTests {
             Customer customer = new Customer("John" + i);
             shop.enter(customer);
         }
-
         assertEquals(number, shop.customers().size());
+    }
+
+    @Test
+    void byteBuffer() throws Exception {
+        ByteBuffer byteBuffer = ByteBuffer.allocate(20);
+        System.out.println("---------------------20 byte to byteBuffer");
+
+        System.out.println("----------------------base byteBuffer");
+        System.out.println(byteBuffer);
+        System.out.println(Arrays.toString(byteBuffer.array()));
     }
 }
