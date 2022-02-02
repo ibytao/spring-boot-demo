@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @Component
-@ConfigurationProperties(prefix = "user")
+// @ConfigurationProperties(prefix = "user")
 public class User {
 
     // @Value("${user.name}")

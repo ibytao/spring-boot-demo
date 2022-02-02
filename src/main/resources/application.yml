@@ -1,9 +1,21 @@
 server:
   port: 8088
-  
+
 spring:
   datasource:
-    url: jdbc:mysql://192.168.2.10:30306/testdb?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://103.140.238.52:3306/mybatis?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
     username: root
-    password: password
+    password: ADDFDDDEE25D46379EBDC7906A9E4585
     driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+car:
+  brand: BMW
+  price: 2000000
